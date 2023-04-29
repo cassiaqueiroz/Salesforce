@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Nova oportunidade" text-align="center" icon-name="standard:opportunity">
+        <div class="slds-box slds-theme_default">
+        <lightning-input label="Nome da Oportunidade" type="text" name="name" required value={oppName} onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Data de Fechamento" type="date" name="datafechamento" required value={closeDate} onchange={handleCloseDateChange}></lightning-input>
+        <lightning-combobox label="Fase" value={stageName} options={stageOptions} required onchange={handleStageChange}></lightning-combobox><br>
+        <div class="slds-var-m-around_medium">
+            <div class="head slds-align_absolute-center">
+            <lightning-button label="Salvar" onclick={handleSave}></lightning-button>
+            </div>
+        </div>
+        </div>
+    </lightning-card>
+  </template>
