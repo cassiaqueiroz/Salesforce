@@ -1,0 +1,40 @@
+<template>
+	<div>
+        <div class="head slds-align_absolute-center">
+            <lightning-card title="Calculadora LWC" icon-name="utility:advanced_function">
+                <div class="slds-align_absolute-center">
+    
+                <div class="slds-box slds-theme_default">
+                
+                <div class="slds-var-m-around_medium">
+		<lightning-input type="decimal" label="Insira o primeiro número" onchange={mudouN1}></lightning-input>
+		<lightning-input type="decimal" label="Insira o segundo número" onchange={mudouN2}></lightning-input>
+        <br/> 
+
+
+		<lightning-button variant="brand-outline" label="+" onclick={soma} class="slds-m-left_x-small">
+		</lightning-button>
+		<lightning-button variant="brand-outline" label="-" onclick={sub} class="slds-m-left_x-small">
+		</lightning-button>
+		<lightning-button variant="brand-outline" label="/" onclick={div} class="slds-m-left_x-small">
+		</lightning-button>
+		<lightning-button variant="brand-outline" label="*" onclick={mult} class="slds-m-left_x-small">
+		</lightning-button>
+	    <lightning-button variant="brand-outline" label="Clear" onclick={handleClickClear} class="slds-m-left_x-small">
+		</lightning-button>
+		<br/><br/>
+		<div class="slds-col">
+            <div class="slds-box slds-theme_default">
+
+          <span><p>{resultado}</p>
+          </span>
+          </div>
+        </div>
+                </div>
+        </div>
+                </div>
+    </lightning-card>
+      </div>
+	</div>
+
+</template>
