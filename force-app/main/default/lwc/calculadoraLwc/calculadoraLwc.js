@@ -4,7 +4,7 @@ import { LightningElement, track } from "lwc";
 //Track: Olhando se a variavel mudou(bindar)
 export default class calculadoraLwc extends LightningElement {
 
-	esconde=true;
+	esconde=false;
 	@track num1;
 	@track num2;
 	resultado;
@@ -25,7 +25,6 @@ export default class calculadoraLwc extends LightningElement {
 	soma(){
      
             this.resultado = (this.num1 + this.num2);
-				this.handleOnClick();
 
 	
         
@@ -34,7 +33,6 @@ export default class calculadoraLwc extends LightningElement {
 	sub(){
        
 		this.resultado = (this.num1 - this.num2);
-		    this.handleOnClick();
 
 
         
@@ -44,7 +42,6 @@ export default class calculadoraLwc extends LightningElement {
 	mult(){
        
 		this.resultado = (this.num1 * this.num2);
-	    this.handleOnClick();
 
 
        
@@ -56,7 +53,6 @@ export default class calculadoraLwc extends LightningElement {
             this.resultado = (this.num1 / this.num2).toFixed(2);
 				
         }
-		this.handleOnClick();
 
 	}
 
@@ -70,6 +66,9 @@ export default class calculadoraLwc extends LightningElement {
         inputFields.forEach(field => { 
                 field.value = null;
                 this.resultado = null;
+
+
+
             });
         }
 	}
