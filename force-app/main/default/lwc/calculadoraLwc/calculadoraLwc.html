@@ -6,8 +6,8 @@
                 <div class="slds-box slds-theme_default">
                 
                 <div class="slds-var-m-around_medium">
-		<lightning-input type="decimal" label="Insira o primeiro número" onchange={mudouN1}></lightning-input>
-		<lightning-input type="decimal" label="Insira o segundo número" onchange={mudouN2}></lightning-input>
+		<lightning-input type="decimal" label="Insira o primeiro número:" onchange={mudouN1}></lightning-input>
+		<lightning-input type="decimal" label="Insira o segundo número:" onchange={mudouN2}></lightning-input>
         <br/> 
 
 
@@ -15,19 +15,21 @@
 		</lightning-button>
 		<lightning-button variant="brand-outline" label="-" onclick={sub} class="slds-m-left_x-small">
 		</lightning-button>
-		<lightning-button variant="brand-outline" label="/" onclick={div} class="slds-m-left_x-small">
-		</lightning-button>
 		<lightning-button variant="brand-outline" label="*" onclick={mult} class="slds-m-left_x-small">
 		</lightning-button>
-	    <lightning-button variant="brand-outline" label="Clear" onclick={handleClickClear} class="slds-m-left_x-small">
+			<lightning-button variant="brand-outline" label="/" onclick={div} class="slds-m-left_x-small">
+			</lightning-button>
+		<lightning-button variant="brand-outline" label="=" onclick={handleOnClick} class="slds-m-left_x-small">
 		</lightning-button>
-		<br/><br/>
+		<br/>
+		<br/>
 		<div class="slds-col">
             <div class="slds-box slds-theme_default">
-
-          <span><p>{resultado}</p>
-          </span>
-          </div>
+          <span><p>{resultado}</p> </span>  </div><br/>
+			<lightning-button variant="destructive-text" label="Clear" onclick={handleClickClear} class="slds-m-left_x-small">
+			</lightning-button>
+         
+        
         </div>
                 </div>
         </div>
