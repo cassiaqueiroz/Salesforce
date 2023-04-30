@@ -10,3 +10,10 @@ p {
     height: 100vh;
     overflow: scroll;
 }
+
+.center {
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
