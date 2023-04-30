@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+        <div class="back">
+            <div class="slds-align_absolute-center">
+ 
+ 
+   <div class="appslds-m-bottom_x-small"><br/>
+   <h1><strong>Deuses Mitológicos</strong></h1>
+ 
+ 
+           <template for:each={deuses} for:item="god">
+           
+            <p key={god.cod}>Deus: {god.nome}, Tipo: {god.tipo}, Gênero: {god.genero},
+                Função: {god.what}, Deus Oposto: {god.oposto}, Função Oposta: {god.whatOposto}.
+            </p>
+   
+        </template>
+    </div>
+ </div>
+ </div>
+ </lightning-card>
+ 
+ 
+ 
+ 
+ </template>
+ 

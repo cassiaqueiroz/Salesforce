@@ -1,0 +1,8 @@
+.head {
+   padding: 40px;
+   align-items: center;
+   text-align: center;
+   align-content: center;
+   background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.8)),
+   url('https://img.freepik.com/foto-gratis/manzana-verde-metro-sobre-fondo-blanco-aislado_169016-26912.jpg?w=996&t=st=1682637696~exp=1682638296~hmac=21cac7129e0ea2b2d34dd098b36072b993422812922470b1e7c87f69a7ade4ae');
+}

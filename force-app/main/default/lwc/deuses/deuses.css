@@ -1,0 +1,35 @@
+html {
+
+
+    font-family: Lato;
+ 
+ 
+ }
+ 
+ 
+ h1 {
+ 
+ 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;   
+ }
+ 
+ 
+ p {
+    padding: 15px;
+ }
+ 
+ 
+ .back {
+    background-image: linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
+    url('https://img.freepik.com/vector-gratis/patron-cultivo-fanzine-degradado_23-2149156301.jpg?w=740&t=st=1682520779~exp=1682521379~hmac=dc588980e6ee5571fe05eed65d9cf57fb881a98a21b8a02c16e477c5d78ab534');
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+ 
+ }
+ 
