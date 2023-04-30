@@ -1,57 +1,61 @@
-import { LightningElement } from "lwc";
+import { LightningElement, track } from "lwc";
 
 //Importação
 //Track: Olhando se a variavel mudou(bindar)
-export default class CalculadoraLwc extends LightningElement {
+export default class calculadoraLwc extends LightningElement {
 
-	
-	num1;
-	num2;
+	esconde=true;
+	@track num1;
+	@track num2;
 	resultado;
-	mostra=false;
 
 	mudouN1(event){
 		this.num1 = Number(event.target.value);
 	}
-	mudouN2(event){
+	
+    mudouN2(event){
 		this.num2 = Number(event.target.value);
-
 	}
 
-
 	soma(){
-		this.resultado = this.num1 + this.num2;
-		mostra=false;
-
+     
+            this.resultado = (this.num1 + this.num2);
+        
 	}
 
 	sub(){
-		this.resultado = this.num1 - this.num2;
-		mostra=false;
-
+       
+		this.resultado = (this.num1 - this.num2);
+        
 	}
 
-	div(){
-		this.resultado = this.num1 / this.num2;
-		if(num2===0){
-		alert("Não é possivi");
-		}
-		mostra=false;
-	}
-
-
+	
 	mult(){
-		this.resultado = this.num1 * this.num2;
+       
+		this.resultado = (this.num1 * this.num2);
+       
+	}
+	div(){
+       if (this.num2 === 0){
+		    alert("Não é possívi");
+	    } else {
+            this.resultado = (this.num1 / this.num2).toFixed(2);
+        }
 	}
 
-handleOnClick() {
+    handleOnClick() {
+			this.esconde = !this.esconde;
+	}
 
-			this.mostra = !this.mostra;
-	}
-	handleClickClear() {
-		this.num1 = null;
-		this.num2 = null;
-		this.resultado = null;
-		
-	}
-}
+    handleClickClear() {
+
+        const inputFields = this.template.querySelectorAll( 
+            'lightning-input'
+        );
+
+        inputFields.forEach(field => { 
+                field.value = null;
+                this.resultado = null;
+            });
+        }
+    }
