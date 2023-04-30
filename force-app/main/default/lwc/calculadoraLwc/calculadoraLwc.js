@@ -16,16 +16,27 @@ export default class calculadoraLwc extends LightningElement {
     mudouN2(event){
 		this.num2 = Number(event.target.value);
 	}
+	
+	handleOnClick() {
+			this.esconde = !this.esconde;
+	
+	}
 
 	soma(){
      
             this.resultado = (this.num1 + this.num2);
+				this.handleOnClick();
+
+	
         
 	}
 
 	sub(){
        
 		this.resultado = (this.num1 - this.num2);
+		    this.handleOnClick();
+
+
         
 	}
 
@@ -33,6 +44,9 @@ export default class calculadoraLwc extends LightningElement {
 	mult(){
        
 		this.resultado = (this.num1 * this.num2);
+	    this.handleOnClick();
+
+
        
 	}
 	div(){
@@ -40,13 +54,13 @@ export default class calculadoraLwc extends LightningElement {
 		    alert("Não é possívi");
 	    } else {
             this.resultado = (this.num1 / this.num2).toFixed(2);
+				
         }
+		this.handleOnClick();
+
 	}
 
-    handleOnClick() {
-			this.esconde = !this.esconde;
-	}
-
+   
     handleClickClear() {
 
         const inputFields = this.template.querySelectorAll( 
@@ -58,4 +72,5 @@ export default class calculadoraLwc extends LightningElement {
                 this.resultado = null;
             });
         }
-    }
+	}
+	
